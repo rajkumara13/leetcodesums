@@ -1,0 +1,24 @@
+class Main {
+    public static void main(String[] args) {
+     int [] height={0,1,0,2,1,0,1,3,2,1,2,1};
+        int n=height.length;
+        int [] leftmax=new int[n];
+        int [] rightmax=new int[n];
+        leftmax[0]=height[0];
+        for(int i=1;i<n;i++){
+        leftmax[i]=(leftmax[i-1]<height[i])?height[i]:leftmax[i-1];
+        }
+        rightmax[n-1]=height[n-1];
+        for(int i=n-2;i>=0;i--){
+        rightmax[i]=(rightmax[i+1]>height[i])?rightmax[i+1]:height[i];
+        }
+        int waterunit=0;
+        for(int i=1;i<n;i++){
+            int a=0;
+            a=(rightmax[i]>leftmax[i])?leftmax[i]:rightmax[i];
+            waterunit+=a-height[i];
+        }
+        System.out.println(waterunit);
+
+    }
+}
