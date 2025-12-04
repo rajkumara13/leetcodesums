@@ -1,0 +1,15 @@
+triangle find area and perimeter
+package org.example;
+public class Main {
+     double breadth,length;
+     public double trianglearea(double length,double breadth){
+        return breadth*length;
+    }
+    public double triangleperimeter(double length,double breadth){
+        return (2*(breadth+length));
+    }
+public static void main(String[] args) {
+        Main obj1=new Main();
+        System.out.println(obj1.triangleperimeter(10,5));
+        }
+    }
