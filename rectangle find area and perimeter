@@ -1,4 +1,4 @@
-triangle find area and perimeter
+rectangle find area and perimeter
 package org.example;
 public class Main {
      double breadth,length;
