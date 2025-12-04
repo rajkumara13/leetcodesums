@@ -1,0 +1,33 @@
+Bank money deposit and withdraw perform in java 
+
+
+package org.example;
+public class Main {
+        double total_amt=10000.00;
+    public double withdraw(double withdraw_amt) {
+        if(total_amt>=0 && total_amt>=withdraw_amt){
+            total_amt=total_amt-withdraw_amt;
+            System.out.println("Withdraw  success fully");
+        } else if (total_amt>0 && total_amt <withdraw_amt) {
+            System.out.println("Minium balance");
+
+        } else{
+            System.out.println("insufficient balance");
+        }
+        return total_amt;
+    }
+    public  double deposit(double dep_amt){
+          total_amt=total_amt+dep_amt;
+          System.out.println("Deposit success fully");
+          return total_amt;
+
+    }
+    void display(){
+        System.out.println("total_balance:"+total_amt);
+    }
+    public static void main(String[] args) {
+        Main obj1=new Main();
+        obj1.withdraw(23044);
+        obj1.display();
+        }
+    }
